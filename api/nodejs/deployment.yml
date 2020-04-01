@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: places-api-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels: # labels to select/identify the deployment
+        app: places-api  
+    spec:     # pod spec                  
+      containers: 
+      - name: places-api 
+        image: gcr.io/mariadb-technical-marketing/places-api-image:v1 # image we pushed
+        ports:
+        - containerPort: 80
