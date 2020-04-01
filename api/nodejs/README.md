@@ -38,10 +38,10 @@ var mariadb = require('mariadb');
 require('dotenv').config();
 
 const pool = mariadb.createPool({
-    host: process.env.DB_HOST_1, 
-    user: process.env.DB_USER_1, 
-    password: process.env.DB_PASS_1,
-    port: process.env.DB_PORT_1,
+    host: process.env.DB_HOST, 
+    user: process.env.DB_USER, 
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
     multipleStatements: true,
     connectionLimit: 5
 });
@@ -63,11 +63,11 @@ const serverCert = [fs.readFileSync("skysql_chain_t.pem", "utf8")];
 
 var pools = [
   mariadb.createPool({
-    host: process.env.DB_HOST_1, 
-    user: process.env.DB_USER_1, 
-    password: process.env.DB_PASS_1,
-    port: process.env.DB_PORT_1,
-    database: process.env.DB_NAME_1,
+    host: process.env.DB_HOST, 
+    user: process.env.DB_USER, 
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
     multipleStatements: true,
     connectionLimit: 5,
     // 3.) Add an "ssl" property to the connection pool configuration, using the serverCert const defined above
