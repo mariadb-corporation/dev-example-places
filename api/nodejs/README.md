@@ -47,9 +47,9 @@ const pool = mariadb.createPool({
 });
 ```
 
-**Configuring db.js for MariaDB SkySQL**
+**Configuring db.js for the MariaDB cloud database service [SkySQL](https://mariadb.com/products/skysql/)**
 
-MariaDB SkySQL uses requires SSL additions to connection. It's as easy as 1-2-3 (steps below).
+MariaDB SkySQL requires SSL additions to connection. It's as easy as 1-2-3 (steps below).
 
 ```javascript
 var mariadb = require('mariadb');
