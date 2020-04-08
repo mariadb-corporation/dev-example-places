@@ -31,6 +31,12 @@ The following will walk you through the steps for getting this application up an
 
 [MariaDB Platform](https://mariadb.com/products/mariadb-platform/) integrates the former [MariaDB TX (transactions)](https://mariadb.com/products/mariadb-platform-transactional/) and [MariaDB AX (analytics)](https://mariadb.com/products/mariadb-platform-analytical/) products so developers can build modern applications by enriching transactions with real-time analytics and historical data, creating insightful experiences and compelling opportunities for customers – and for businesses, endless ways to monetize data. It’s the only enterprise open source database built for modern applications running in the cloud.
 
+<p align="center" spacing="10">
+    <kbd>
+        <img src="media/platform.png" />
+    </kbd>
+</p>
+
 To download and deploy MariaDB check out the instructions [here](https://mariadb.com/docs/deploy/installation/). You can also make use of the [MariaDB image available on Docker Hub](https://hub.docker.com/_/mariadb).
 
 ### MariaDB SkySQL <a name="skysql">
@@ -113,7 +119,15 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       })(MapContainer)
       ```
 
-   3. Pick an [API](api) project and follow the instructions of the README within the API project root.
+   3. Pick an [API](api) project and follow the instructions of the README to build and run the API project.
+
+   4. Navigate to the [client](client) folder and execute the following CLI command to start the React.js application.
+
+      ```bash 
+      $ npm start
+      ``` 
+
+   5. Open a browser window and navigate to http://localhost:3000.
 
 ## JSON Data Models <a name="data-models"></a>
 

@@ -38,10 +38,11 @@ var mariadb = require('mariadb');
 require('dotenv').config();
 
 const pool = mariadb.createPool({
-    host: process.env.DB_HOST_1, 
-    user: process.env.DB_USER_1, 
-    password: process.env.DB_PASS_1,
-    port: process.env.DB_PORT_1,
+    host: process.env.DB_HOST, 
+    user: process.env.DB_USER, 
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
     multipleStatements: true,
     connectionLimit: 5
 });
@@ -63,11 +64,11 @@ const serverCert = [fs.readFileSync("skysql_chain_t.pem", "utf8")];
 
 var pools = [
   mariadb.createPool({
-    host: process.env.DB_HOST_1, 
-    user: process.env.DB_USER_1, 
-    password: process.env.DB_PASS_1,
-    port: process.env.DB_PORT_1,
-    database: process.env.DB_NAME_1,
+    host: process.env.DB_HOST, 
+    user: process.env.DB_USER, 
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
     multipleStatements: true,
     connectionLimit: 5,
     // 3.) Add an "ssl" property to the connection pool configuration, using the serverCert const defined above
@@ -106,4 +107,12 @@ Once you've pulled down the code and have verified that all of the required Node
 $ npm start
 ```
 
-2. Open a browser window and navigate to http://localhost:3000.
+The following steps also exist within the ["Build and run"](../../#build-and-run-the-app-) section of the root README, and are for startin the React.js project once this API project has been started.
+
+2. Navigate to the [../../client](client) folder and execute the following CLI command to start the React.js application.
+
+```bash 
+$ npm start
+```
+
+3. Open a browser window and navigate to http://localhost:3000.
