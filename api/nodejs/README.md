@@ -1,17 +1,17 @@
 # Places - Node.js API
 
-1. [Environment and compatibility](#compatibility)
+1. [Requirements](#requirements)
 2. [Getting started with the app](#getting-started)
     1. [Configure the code](#configure-code)
     2. [Build the code](#build-code)
     3. [Run the app](#run-app)
 
-## Environment and compatibility <a name="compatibility"></a>
+## Requirements <a name="requirements"></a>
 
-This sample was created using the following techologies:
+This sample was created using the following techologies and they must be installed before proceeding.
 
-* [Node.js (v.12.x)](https://nodejs.org/docs/latest-v12.x/api/index.html)
-* [NPM (v.6.11.3)](https://docs.npmjs.com/)
+* [Node.js (v. 12+)](https://nodejs.org/docs/latest-v12.x/api/index.html)
+* [NPM (v. 6+)](https://docs.npmjs.com/)
 
 ## Getting started with the app <a name="getting-started"></a>
 
