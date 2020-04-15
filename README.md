@@ -131,7 +131,7 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       REACT_APP_GOOGLE_API_KEY=<google_api_key_here>
       ```
 
-      **Note:** The `REACT_APP_GOOGLE_API_KEY` environmental variable is used [here](src/components/MapContainer.js#L250).
+      **Note:** The `REACT_APP_GOOGLE_API_KEY` environmental variable is used [here](client/src/components/MapContainer.js#L250).
 
    3. Pick an [API](api) project and follow the instructions of the README to build and run the API project.
 
