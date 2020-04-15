@@ -119,7 +119,7 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       $ npm install
       ```
 
-   2. Configure the MariaDB connection by an environmental (called `.env`) file within the `client` folder.
+   2. Configure the MariaDB connection by an [environmental](https://www.npmjs.com/package/dotenv) (called `.env`) file within the `client` folder.
 
       ```
       $ touch .env
