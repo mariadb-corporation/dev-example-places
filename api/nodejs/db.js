@@ -15,7 +15,7 @@ const pool = mariadb.createPool({
   port: process.env.DB_PORT,
   database: process.env.DB_NAME,
   multipleStatements: true,
-  connectionLimit: 5,
+  connectionLimit: 5
   /*
     ,ssl: {
       ca: serverCert
