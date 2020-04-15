@@ -84,7 +84,7 @@ $ git clone https://github.com/mariadb-corporation/dev-example-orders.git
 [Connect to the database](https://mariadb.com/kb/en/connecting-to-mariadb/) using CLI or a client and execute the following:
 
 ```sql
-CREATE TABLE `Locations` (
+CREATE TABLE `locations` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL DEFAULT '',
   `description` varchar(500) DEFAULT '',
@@ -119,13 +119,19 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       $ npm install
       ```
 
-   2. Add the a Google Maps API KEY to [MapContainer.js](client/src/components/MapContainer.js#L248):
+   2. Configure the MariaDB connection by an environmental (called `.env`) file within the `client` folder.
 
-      ```javascript
-      export default GoogleApiWrapper({
-         apiKey: ("ENTER_GOOGLE_API_KEY")
-      })(MapContainer)
       ```
+      $ touch .env
+      ```
+
+      Then add the key `REACT_APP_GOOGLE_API_KEY` and a Google Maps API Key.
+
+      ```
+      REACT_APP_GOOGLE_API_KEY=<google_api_key_here>
+      ```
+
+      **Note:** The `REACT_APP_GOOGLE_API_KEY` environmental variable is used [here](src/components/MapContainer.js#L250).
 
    3. Pick an [API](api) project and follow the instructions of the README to build and run the API project.
 

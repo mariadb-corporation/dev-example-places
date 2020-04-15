@@ -13,6 +13,8 @@ import Restaurant from './Restaurant';
 import SportsVenue from './SportsVenue';
 import UpdateLastVisit from './UpdateLastVisit';
 
+require('dotenv').config();
+
 export class MapContainer extends Component {
 
     constructor(props) {
@@ -245,5 +247,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: ("ENTER_GOOGLE_API_KEY")
+    apiKey: (process.env.REACT_APP_GOOGLE_API_KEY)
 })(MapContainer)
