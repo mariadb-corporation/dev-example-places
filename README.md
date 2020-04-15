@@ -125,7 +125,7 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       $ touch .env
       ```
 
-      Then add the key `REACT_APP_GOOGLE_API_KEY` and a Google Maps API Key.
+      Then add the key `REACT_APP_GOOGLE_API_KEY` and a [Google Maps API Key](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
       ```
       REACT_APP_GOOGLE_API_KEY=<google_api_key_here>
