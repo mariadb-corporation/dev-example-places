@@ -76,7 +76,7 @@ In order to run the Places application you will need to have a MariaDB instance 
 Download this code directly or use [git](git-scm.org) (through CLI or a client) to retrieve the code using `git clone`:
 
 ```
-$ git clone https://github.com/mariadb-corporation/dev-example-orders.git
+$ git clone https://github.com/mariadb-corporation/dev-example-places.git
 ```
 
 ### Create the schema <a name="schema"></a>
