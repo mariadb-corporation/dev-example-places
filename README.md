@@ -93,7 +93,7 @@ CREATE TABLE `locations` (
   `longitude` decimal(9,6) NOT NULL,
   `attr` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`attr`)),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
 ### Anatomy of the app <a name="app"></a>
