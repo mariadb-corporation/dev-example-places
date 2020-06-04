@@ -107,7 +107,7 @@ This application is made of two parts:
     - uses a MariaDB Connector to connect to MariaDB.
     - contains multiple projects, located in the [api](api) folder.
         - [Node.js](api/nodejs)
-        - Python (coming soon!)
+        - [Python](api/python)
 
 See the README's in [client](client/README.md) and [api](api/README.md) for more information on how to get started!
 
