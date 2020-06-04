@@ -76,7 +76,7 @@ In order to run the Places application you will need to have a MariaDB instance 
 Download this code directly or use [git](git-scm.org) (through CLI or a client) to retrieve the code using `git clone`:
 
 ```
-$ git clone https://github.com/mariadb-corporation/dev-example-orders.git
+$ git clone https://github.com/mariadb-corporation/dev-example-places.git
 ```
 
 ### Create the schema <a name="schema"></a>
@@ -93,7 +93,7 @@ CREATE TABLE `locations` (
   `longitude` decimal(9,6) NOT NULL,
   `attr` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`attr`)),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
 ### Anatomy of the app <a name="app"></a>
@@ -119,19 +119,19 @@ See the README's in [client](client/README.md) and [api](api/README.md) for more
       $ npm install
       ```
 
-   2. Configure the MariaDB connection by an environmental (called `.env`) file within the `client` folder.
+   2. Configure the MariaDB connection by an [environmental](https://www.npmjs.com/package/dotenv) (called `.env`) file within the `client` folder.
 
       ```
       $ touch .env
       ```
 
-      Then add the key `REACT_APP_GOOGLE_API_KEY` and a Google Maps API Key.
+      Then add the key `REACT_APP_GOOGLE_API_KEY` and a [Google Maps API Key](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
       ```
       REACT_APP_GOOGLE_API_KEY=<google_api_key_here>
       ```
 
-      **Note:** The `REACT_APP_GOOGLE_API_KEY` environmental variable is used [here](src/components/MapContainer.js#L250).
+      **Note:** The `REACT_APP_GOOGLE_API_KEY` environmental variable is used [here](client/src/components/MapContainer.js#L250).
 
    3. Pick an [API](api) project and follow the instructions of the README to build and run the API project.
 
