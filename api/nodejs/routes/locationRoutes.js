@@ -33,7 +33,7 @@ router.post("/", async (req, res, next) => {
     try {
         conn = await pool.getConnection();
         var query = "insert into locations (name, description, type, latitude, longitude, attr) values (?, ?, ?, ?, ?, json_compact(?))";
-        var result = await conn.query(query, [location.name, location.description, location.type, location.latitude, location.longitude, JSON.stringify(location.attr)]);
+        var result = await conn.query(query, [location.name, location.description, location.type, location.latitude, location.longitude, location.attr]);
         res.send(result);
     } catch (err) {
         throw err;
@@ -73,7 +73,7 @@ router.post("/restaurant/favorites", async (req, res, next) => {
     try {
         conn = await pool.getConnection();
         var query = "update locations set attr = json_array_append(attr, '$.favorites', json_compact(?)) where id = ?"
-        var result = await conn.query(query, [JSON.stringify(details), favorite.locationid]);
+        var result = await conn.query(query, [details, favorite.locationId]);
         res.send(result);
     } catch (err) {
         throw err;
@@ -106,13 +106,13 @@ router.get("/sportsvenue", async (req, res, next) => {
 });
 
 // POST new sports venue event
-router.post("/sportsvenue/event", async (req, res, next) => {
+router.post("/sportsvenue/events", async (req, res, next) => {
     let event = req.body;
     let conn;
     try {
         conn = await pool.getConnection();
         var query = "update locations set attr = json_array_append(attr, '$.events', json_compact(?)) where id = ?";
-        var result = await conn.query(query, [JSON.stringify(event.details), event.locationid]);
+        var result = await conn.query(query, [event.details, event.locationId]);
         res.send(result);
     } catch (err) {
         throw err;

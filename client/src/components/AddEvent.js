@@ -29,7 +29,7 @@ export default class AddEvent extends Component {
     async saveEvent() {
         var event = this.getEvent();
 
-        var res = await fetch('/api/locations/sportsvenue/event',{
+        var res = await fetch('/api/locations/sportsvenue/events',{
             method: 'POST',
             body: JSON.stringify(event),
             headers: {"Content-Type": "application/json"}
@@ -42,11 +42,11 @@ export default class AddEvent extends Component {
 
     getEvent() {
         var event = {
-            locationid: this.props.id,
-            details: {
+            locationId: this.props.id,
+            details: JSON.stringify({
                 date: this.state.eventDate.toLocaleDateString(),
                 description: this.state.description
-            }
+            })
         };
 
         return event;

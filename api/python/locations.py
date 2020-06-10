@@ -48,7 +48,7 @@ def index():
        longitude = request.json['longitude']
        attr = request.json['attr']
        query = "insert into locations (name, description, type, latitude, longitude, attr) values (?, ?, ?, ?, ?, json_compact(?))"
-       cur.execute(query,(name, description, type, latitude, longitude, json.dumps(attr)))
+       cur.execute(query,(name, description, type, latitude, longitude, attr))
        json_data = { 'success': True }
 
    return json.dumps(json_data), 200, {'ContentType':'application/json'} 
@@ -74,12 +74,12 @@ def get_restaurant():
 
 @locations.route('/api/locations/restaurant/favorites', methods=['POST'])
 def add_restaurant_favorite():
-    id = request.json['locationid']
+    id = request.json['locationId']
     details = request.json['details']
     conn = mariadb.connect(**config)
     cur = conn.cursor()
     query = "update locations set attr = json_array_append(attr, '$.favorites', json_compact(?)) where id = ?"
-    cur.execute(query,[json.dumps(details),id])
+    cur.execute(query,[details,id])
     return json.dumps({ 'success': True }), 200, {'ContentType':'application/json'} 
 
 @locations.route('/api/locations/sportsvenue', methods=['GET'])
@@ -102,14 +102,14 @@ def get_sportsvenue():
    json_obj=dict(zip(row_headers,result))
    return json.dumps(json_obj), 200, {'ContentType':'application/json'} 
 
-@locations.route('/api/locations/sportsvenue/event', methods=['POST'])
+@locations.route('/api/locations/sportsvenue/events', methods=['POST'])
 def add_sportsvenue_event():
-    id = request.json['locationid']
+    id = request.json['locationId']
     details = request.json['details']
     conn = mariadb.connect(**config)
     cur = conn.cursor()
     query = "update locations set attr = json_array_append(attr, '$.events', json_compact(?)) where id = ?"
-    cur.execute(query,[json.dumps(details),id])
+    cur.execute(query,[details,id])
     return json.dumps({ 'success': True }), 200, {'ContentType':'application/json'} 
 
 @locations.route('/api/locations/attractions', methods=['PUT'])

@@ -37,11 +37,11 @@ export default class AddRestaurantVisit extends Component {
 
     getFavorite() {
         var favorite = {
-            locationid: this.props.id,
-            details: {
+            locationId: this.props.id,
+            details: JSON.stringify({
                 description: this.state.description,
                 price: this.state.price
-            }
+            })
         };
 
         return favorite;

@@ -24,7 +24,7 @@ export default class AddLocation extends Component {
     };
 
     handleDescriptionChange = event => {
-        this.setState({ desciption: event.target.value });
+        this.setState({ description: event.target.value });
     };
 
     handleLatitudeChange = event => {
@@ -72,19 +72,21 @@ export default class AddLocation extends Component {
     getLocation() {
       var location = {
         name: this.state.name,
-        description: (this.state.description === undefined ? null : this.state.description),
+        description: this.state.description,
         type: this.state.type,
         latitude: this.state.latitude,
         longitude: this.state.longitude
       };
 
+      var attr = {};
+
       if (this.state.type === 'A') {
-        location.attr = {
+        attr = {
           category: this.state.category
-        }
+        };
       }
       else if (this.state.type === 'R') {
-        location.attr = {
+        attr = {
           details: {
             foodType: this.state.foodType,
             menu: this.state.menu
@@ -93,7 +95,7 @@ export default class AddLocation extends Component {
         };
       }
       else if (this.state.type === 'S') {
-        location.attr = {
+        attr = {
           details: {
             yearOpened: this.state.yearOpened,
             capacity: this.state.capacity
@@ -101,6 +103,8 @@ export default class AddLocation extends Component {
           events: []
         };
       }
+
+      location.attr = JSON.stringify(attr);
 
       return location;
     }
