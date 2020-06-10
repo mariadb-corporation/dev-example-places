@@ -1,4 +1,4 @@
-# Flights - Python API
+# Places - Python API
 
 1. [Requirements](#requirements)
 2. [Getting started with the app](#getting-started)
@@ -30,9 +30,9 @@ DB_PASS=<password>
 DB_NAME=places
 ```
 
-**Configuring db.js**
+**Connection details**
 
-The environmental variables from `.env` are used within the [db.js](src/db.js) for the MariaDB Python Connector configuration pool settings:
+The environmental variables from `.env` are used to connect to the MariaDB using the MariaDB Python Connector configuration pool settings:
 
 ```python
 config = {
