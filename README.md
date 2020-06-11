@@ -108,6 +108,7 @@ This application is made of two parts:
     - contains multiple projects, located in the [api](api) folder.
         - [Node.js](api/nodejs)
         - [Python](api/python)
+        - [Java via R2DBC](api/r2dbc)
 
 See the README's in [client](client/README.md) and [api](api/README.md) for more information on how to get started!
 
