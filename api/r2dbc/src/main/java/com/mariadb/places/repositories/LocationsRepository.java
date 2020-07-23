@@ -1,7 +1,5 @@
 package com.mariadb.places.repositories;
 
-import java.util.Date;
-
 import com.mariadb.places.models.Location;
 
 import org.springframework.data.r2dbc.repository.Query;
