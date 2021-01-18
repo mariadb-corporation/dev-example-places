@@ -14,7 +14,7 @@ public interface LocationRepository extends CrudRepository<Location, Integer> {
     "when type = 'A' then (case when json_value(attr, '$.lastVisitDate') is not null " +
     "then json_value(attr, '$.lastVisitDate') else 'N/A' end) " +
     "when type = 'S' then concat((case when json_length(attr, '$.events') is not null " +
-    "then json_length(attr, '$.events') else 0 end), ' events') end as description " +
+    "then json_length(attr, '$.events') else 0 end), ' events') end as description, attr " +
     "from locations", nativeQuery = true)
     public Iterable<Location> findAll();
 

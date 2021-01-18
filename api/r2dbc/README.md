@@ -93,6 +93,7 @@ The following steps also exist within the ["Build and run"](../../#build-and-run
 2. Navigate to the [../../client](client) folder and execute the following CLI command to start the React.js application.
 
 ```bash 
+$ npm install
 $ npm start
 ```
 
