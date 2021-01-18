@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>org.mariadb</groupId>
 			<artifactId>r2dbc-mariadb</artifactId>
-			<version>0.8.2-alpha2</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
