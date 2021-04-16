@@ -79,7 +79,7 @@ export default class Restaurant extends Component {
             this.state.restaurant.favorites !== undefined &&
             this.state.restaurant.favorites !== null) {
 
-            var favorites = JSON.parse(this.state.restaurant.favorites);
+            var favorites = this.state.restaurant.favorites;
 
             if (favorites.length > 0) {
                 return (

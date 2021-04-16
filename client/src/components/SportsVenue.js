@@ -79,7 +79,7 @@ export default class SportsVenue extends Component {
             this.state.venue.events !== undefined &&
             this.state.venue.events !== null) {
 
-            var events = JSON.parse(this.state.venue.events);
+            var events = this.state.venue.events;
 
             if (events.length > 0) {
                 return (
