@@ -1,7 +1,7 @@
 {
   "name": "places",
   "version": "1.0.0",
-  "description": "", 
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

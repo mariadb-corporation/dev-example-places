@@ -14,22 +14,14 @@ const pool = mariadb.createPool({
   password: process.env.DB_PASS,
   port: process.env.DB_PORT,
   database: process.env.DB_NAME,
-  multipleStatements: true,
-  connectionLimit: 5
-  /*
-    ,ssl: {
-      ca: serverCert
-    }*/
+  multipleStatements: true
+  /*,
+  ssl: {
+    ca: serverCert
+  }*/
 });
 
-module.exports={
-    getConnection: function(){
-      return new Promise(function(resolve,reject){
-        pool.getConnection().then(function(connection){
-          resolve(connection);
-        }).catch(function(error){
-          reject(error);
-        });
-      });
-    }
-  } 
+// Expose the Pool object within this module
+module.exports = Object.freeze({
+  pool: pool
+});
