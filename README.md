@@ -1,5 +1,15 @@
 # Places
 
+⚠️⚠️⚠️ <br /><br />
+**[UNMAINTAINED]** <br /> This repository has been split up (by back-end language), moved and is currently maintained at the following locations:
+* [Node.js (basic)](https://github.com/mariadb-developers/places-app-nodejs)
+* [Python (basic)](https://github.com/mariadb-developers/places-app-python)
+* [JDBC (Spring Data)](https://github.com/mariadb-developers/places-app-jdbc-spring)
+* [R2DBC (Spring Data)](https://github.com/mariadb-developers/places-app-r2dbc-spring)
+<br />
+⚠️⚠️⚠️ 
+<br /><br /> 
+
 **Places** is a web application backed by the power of the power, performance, and simplicity of [MariaDB platform](https://mariadb.com/products/mariadb-platform/), allows you to record all of your favorite locations!
 
 <p align="center">
