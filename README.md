@@ -14,11 +14,8 @@ This README will walk you through the steps for getting the Places web applicati
 
 # Table of Contents
 1. [Requirements](#requirements)
-2. [Introduction to MariaDB](#introduction)
-    1. [MariaDB Platform](#platform)
-    2. [MariaDB SkySQL](#skysql)
-    3. [Using JSON in a relational database](#json-relational)
-3. [Getting started](#getting-started)
+2. [Getting started with MariaDB and JSON](#introduction)
+3. [Getting started with the app](#getting-started)
     1. [Get the code](#code)
     2. [Create the schema](#schema)
     3. [Anatomy of the app](#app)
@@ -33,45 +30,11 @@ This sample application, no matter which API project you target, will requires t
 
 * [MariaDB Client](https://mariadb.com/products/skysql/docs/clients/), used to connect to MariaDB instances.
 
-## Introduction to MariaDB <a name="introduction"></a>
+## Getting started with MariaDB and JSON <a name="introduction"></a>
 
-### MariaDB Platform <a name="platform"></a>
+Set up a MariaDB database, loaded with the data this sample needs, using the [MariaDB JSON Quickstart](https://github.com/mariadb-developers/mariadb-json-quickstart), before continuing to the next step.
 
-[MariaDB Platform](https://mariadb.com/products/mariadb-platform/) integrates the former [MariaDB TX (transactions)](https://mariadb.com/products/mariadb-platform-transactional/) and [MariaDB AX (analytics)](https://mariadb.com/products/mariadb-platform-analytical/) products so developers can build modern applications by enriching transactions with real-time analytics and historical data, creating insightful experiences and compelling opportunities for customers – and for businesses, endless ways to monetize data. It’s the only enterprise open source database built for modern applications running in the cloud.
-
-<p align="center" spacing="10">
-    <kbd>
-        <img src="media/platform.png" />
-    </kbd>
-</p>
-
-To get started using MariaDB locally you can:
-
-* [Download and install MariaDB (Community or Enterprise) directly from mariadb.com](https://mariadb.com/downloads) 
-
-* [Download and install MariaDB using the official MariaDB Community Server 10.6 Docker Image available at hub.docker.com](https://hub.docker.com/_/mariadb)
-
-### MariaDB SkySQL <a name="skysql">
-
-[SkySQL](https://mariadb.com/products/skysql/) is the first and only database-as-a-service (DBaaS) to bring the full power of MariaDB Platform to the cloud, including its support for transactional, analytical and hybrid workloads. Built on Kubernetes, and optimized for cloud infrastructure and services, SkySQL combines ease of use and self-service with enterprise reliability and world-class support – everything needed to safely run mission-critical databases in the cloud, and with enterprise governance.
-
-[Get started with SkySQL!](https://mariadb.com/skyview)
-
-<p align="center" spacing="10">
-    <kbd>
-        <img src="media/skysql.png" />
-    </kbd>
-</p>
-
-### Using JSON in a relational database <a name="json-relational"></a>
-
-[JSON](https://www.json.org) is fast becoming the standard format for data interchange and for unstructured data, and MariaDB Platform (in fact, all MariaDB versions 10.2 and later) include a range of [JSON supporting functions](https://mariadb.com/topic/json/).
-
-The Places application uses only a **single table** for all location, and uses JSON to store more specific information based on the location type.
-
-For more information on how JSON can be used within MariaDB please check out this [blog post](https://mariadb.com/resources/blog/json-with-mariadb-10-2/)!
-
-## Getting started <a name="getting-started"></a>
+## Getting started with the app <a name="getting-started"></a>
 
 In order to run the Places application you will need to have a MariaDB instance to connect to. For more information please check out "[Get Started with MariaDB](https://mariadb.com/get-started-with-mariadb/)".
 
@@ -209,9 +172,17 @@ Below are samples of the data model per Location Type.
 
 ## Support and Contribution <a name="support-contribution"></a>
 
-Thanks so much for taking a look at the Places app! As this is a very simple example, there's plenty of potential for customization. Please feel free to submit PR's to the project to include your modifications!
+Please feel free to submit PR's, issues or requests to this project project or projects within the [official MariaDB Corporation GitHub organization](https://github.com/mariadb-corporation).
 
-If you have any questions, comments, or would like to contribute to this or future projects like this please reach out to us directly at developers@mariadb.com or on [Twitter](https://twitter.com/mariadb).
+If you have any other questions, comments, or looking for more information on MariaDB please check out:
+
+* [MariaDB Developer Hub](https://mariadb.com/developers)
+* [MariaDB Community Slack](https://r.mariadb.com/join-community-slack)
+
+Or reach out to us diretly via:
+
+* [developers@mariadb.com](mailto:developers@mariadb.com)
+* [MariaDB Twitter](https://twitter.com/mariadb)
 
 ## License <a name="license"></a>
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=plastic)](https://opensource.org/licenses/MIT)
